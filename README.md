@@ -1,6 +1,6 @@
 <h1 align="center"> <p> The Dual Operating Modes of In-Conctext Learning </p></h1>
 <h4 align="center">
-    <p><a href="https://yzeng58.github.io/zyc_cv/" target="_blank">Yuchen Zeng</a>, <a href="https://kangwooklee.com/aboutme/" target="_blank">Kangwook Lee</a></p>
+    <p><a href="https://myhakureimu.github.io/" target="_blank">Ziqian Lin</a>, <a href="https://kangwooklee.com/aboutme/" target="_blank">Kangwook Lee</a></p>
     <p>UW-Madison</p>
     </h4>
 
