@@ -175,7 +175,7 @@ for index,data_name in enumerate(classification_datasets):
                 #    print('############################')
                 #    print(prompty['prompt'])
                 
-                ans = ''#call_gptapi(prompty['prompt'], openai_key = 'zl21', model = 'gpt-4')
+                ans = call_gptapi(prompty['prompt'], openai_key = 'key', model = 'gpt-4')
                 #whole, ans = call_mistral(prompty['prompt'], model=model, tokenizer=tokenizer, max_output_length=max_output_length)
                 #print('############')
                 #print(ans[:20])
@@ -191,7 +191,7 @@ for index,data_name in enumerate(classification_datasets):
                 #print('############################')
                 #print(prompty['prompt'])
                 
-                ans = ''#call_gptapi(prompty['prompt'], openai_key = 'zl21', model = 'gpt-4')
+                ans = call_gptapi(prompty['prompt'], openai_key = 'key', model = 'gpt-4')
                 #whole, ans = call_mistral(prompty['prompt'], model=model, tokenizer=tokenizer, max_output_length=max_output_length)
                 #print('############')
                 #print(ans[:20])
@@ -201,7 +201,7 @@ for index,data_name in enumerate(classification_datasets):
                 if prompty['y'] == ans.lower()[1:len(prompty['y'])+1]:
                     rand_correct += 1 
                 
-            #print(gold_correct, rand_correct, count, int(sum(gold_example_num)/count), int(sum(rand_example_num)/count))
+            print(gold_correct, rand_correct, count, int(sum(gold_example_num)/count), int(sum(rand_example_num)/count))
                 
         D[k] = {}
         D[k]['gold'] = gold_correct
@@ -212,11 +212,11 @@ for index,data_name in enumerate(classification_datasets):
         D[k]['gold_example'] = sum(gold_example_num)/count
         D[k]['rand_example'] = sum(rand_example_num)/count
         
-        #with open(save_file_name+'/D_' +data_name+ '.pickle', 'wb') as handle:
-        #    pickle.dump(D, handle, protocol=pickle.HIGHEST_PROTOCOL)
+        with open(save_file_name+'/D_' +data_name+ '.pickle', 'wb') as handle:
+            pickle.dump(D, handle, protocol=pickle.HIGHEST_PROTOCOL)
         
-        #with open(save_file_name+'/D_' +data_name+ '.pickle', 'rb') as handle:
-        #    D = pickle.load(handle)
+        with open(save_file_name+'/D_' +data_name+ '.pickle', 'rb') as handle:
+            D = pickle.load(handle)
             
     print('***', D[128]['gold_example'], '***')
     print('***', D[128]['rand_example'], '***')

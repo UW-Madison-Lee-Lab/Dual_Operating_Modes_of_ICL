@@ -3,15 +3,7 @@ from openai.error import RateLimitError
 import time
 
 openai_keys = {
-    'yz1': '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',
-    'yz2': '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',
-    'yz3': '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',
-    'zl11': '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',
-    'zl12': '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',
-    'zl21': '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',
-    'zl22': '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',
-    'rz3': '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',
-    'rz4': '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',
+    'key': 'yourkey',
 }     
 
 def get_final_prompt(prompt, demonstrations, sys_msg):
