@@ -53,7 +53,7 @@ After finishing running the five experiments, run:
 ```
 python 5.2.2-ZeroICL.py
 ```
-Note: In these codes, the inferences of llama2, mistral, and mixtral are based on [vllm](https://docs.vllm.ai/en/latest/), you will need at least 4xA100 to run the biggest models mixtral and llama-2-70b-hf.
+Note: In these codes, the inferences of llama2, mistral, and mixtral are based on [vllm](https://docs.vllm.ai/en/latest/), you will need at least 4xA100 to run the biggest models including mixtral and llama-2-70b-hf.
 ## Transformer Experiment
 ### Figure 9
 ```bash
