@@ -40,7 +40,7 @@ python Ushape.py
 cd RealWorldLLMExperiment/Figure8/
 vi call_openai.py
 ```
-replace "yourkey" in the file with your openai key
+Replace "yourkey" in the file with your openai key
 ```bash
 python test_gpt4.py
 python test_llama-2-13b-hf.py
