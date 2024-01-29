@@ -6,7 +6,17 @@
 
 **Paper Link**: TBD link
 
-TBD abstract
+In-context learning (ICL) exhibits dual operating modes: \emph{task learning}, \ie{} acquiring a new skill from in-context samples, and \emph{task retrieval}, \ie{}, locating and activating a relevant pretrained skill.
+Recent theoretical work investigates various mathematical models to analyze ICL, but existing models explain only one operating mode at a time.
+We introduce a probabilistic model, with which one can explain the dual operating modes of ICL simultaneously.
+Focusing on in-context learning of linear functions, we extend existing models for pretraining data by introducing multiple task groups and task-dependent input distributions. 
+We then analyze the behavior of the optimally pretrained model under the squared loss, \ie{}, the MMSE estimator of the label given in-context examples.
+Regarding pretraining task distribution as prior and in-context examples as observation, we derive the closed-form expression of the task posterior distribution. 
+With the closed-form expression, we obtain a quantitative understanding of the two operating modes of ICL.
+Furthermore, we shed light on an unexplained phenomenon observed in practice: under certain settings, the ICL risk initially increases and then decreases with more in-context examples.
+Our model offers a plausible explanation for this ``early ascent'' phenomenon: a limited number of in-context samples may lead to the retrieval of an incorrect skill, thereby increasing the risk, which will eventually diminish as task learning takes effect with more in-context samples.
+We also theoretically analyze ICL with incorrect labels, \eg, zero-shot ICL, where in-context examples are assigned random labels.
+Lastly, we validate our findings and predictions via experiments involving Transformers and large language models.
 
 # Experiments
 The following sections give guidance for reproducing all the experiments in the paper.
