@@ -10,3 +10,7 @@ TBD abstract
 
 # Experiments
 ## Numerical Computation
+### Figure 5
+```bash
+cd NumericalComputation/Figure4/
+```
