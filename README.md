@@ -55,6 +55,7 @@ After finishing running the five experiments, run:
 python 5.2.2-ZeroICL.py
 ```
 ## Transformer Experiment
+The following code can be run on a single 4090 GPU.
 ### Figure 9
 ```bash
 python TS_Regular4_4_run.py
