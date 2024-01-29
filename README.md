@@ -13,4 +13,5 @@ TBD abstract
 ### Figure 5
 ```bash
 cd NumericalComputation/Figure4/
+python BayesianSimulation_prediction.py
 ```
