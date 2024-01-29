@@ -9,6 +9,7 @@
 TBD abstract
 
 # Experiments
+The following sections give guidance for reproducing all the experiments in the paper.
 ## Numerical Computation
 ### Figure 4
 ```bash
