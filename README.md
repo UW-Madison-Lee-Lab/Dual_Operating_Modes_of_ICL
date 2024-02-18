@@ -20,6 +20,8 @@ Lastly, we validate our findings and predictions via experiments involving Trans
 
 # Experiments
 The following sections give guidance for reproducing all the experiments in the paper.
+## Accessing Data for Efficient Experiment Replication 
+To replicate the experiments efficiently, download the .zip files from the provided [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0) and unzip them directly into the corresponding directory within your cloned or downloaded GitHub repository. (You need a Dropbox account first. Register one with any email for free! Do not spend money on it to download the data!) For instance, if the .zip file resides in "NumericalComputation/Figure4/" within Dropbox, it should be unzipped to "NumericalComputation/Figure4/" in your local repository. Please note that some experimental outcomes are not included in this link due to their execution time.
 ## Numerical Computation
 ### Figure 4
 ```bash
