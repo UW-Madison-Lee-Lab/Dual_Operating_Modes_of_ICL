@@ -91,9 +91,10 @@ cd NumericalComputation/Figure5/
 python EarlyAscent_Preprocess.py
 ```
 One can reduce the sample size "K = 10000" for the Monte Carlo simulation in the code to accelerate the process, though this will likely result in increased variance.
-**Note**: The code takes a long time to run since it loops through the bottom parameters.
+**Note**: The code takes a long time to run since it loops through these parameters:
 d_list = \[1,2,3,5,8\]
-demon_list = \[0,1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,131072\]
+and
+demon_list = \[0,1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,131072\].
 
 #### Step 2 (Method 2): Download Results from Dropbox
 Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0).
