@@ -4,6 +4,7 @@ import time
 
 openai_keys = {
     'key': 'yourkey',
+}
 
 def get_final_prompt(prompt, demonstrations, sys_msg):
     demos = '\n\n'.join([f"{demonstration['prompt']}\n\nAnswer: {demonstration['completion']}" for demonstration in demonstrations])

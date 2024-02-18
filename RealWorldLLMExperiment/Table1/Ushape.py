@@ -2,7 +2,7 @@ import random
 import numpy as np
 import copy
 from call_openai import call_gptapi
-
+import argparse
 import time
 
 def number2prompt(integers):
@@ -26,38 +26,13 @@ def get_llm_results(data, openai_key, model):
     print(prompt['prompt'])
     ans1 = call_gptapi(prompt['prompt'], openai_key = openai_key, model=model)
     print(ans1)
-    #ans1 = ans1[-5000:]
-    #print(ans1)
-    #history = [{'prompt': prompt['cot'],
-    #           'completion': ans1}]
-    
-    #ans2 = None#call_gptapi(prompt['sum'], openai_key = openai_key, demonstrations=history, model=model)
-    
-    #prompt = number2prompt(data, single=True)
-    #print(prompt['cot'])
-    #ans3 = call_gptapi(prompt['cot'], openai_key = openai_key, model=model)
-    #print(ans3)
     return ans1
 
-
-if 0: #test basic accuracy:
-    # 7529 8100 0.9295061728395062
-    correct = 0
-    count = 0
-    for a in np.arange(99,9,-1):
-        for b in np.arange(99,9,-1):
-            #print(integers)
-            integers = [[a,b]]
-            preds = get_llm_results(integers, openai_key = 'key', model = 'gpt-4')
-            count += 1
-            
-            preds.replace(' ', '')
-            # Split the string by comma
-            answers = preds.split(',')
-            if int(answers[0]) == (a*b):
-                correct += 1
-            print(correct,count,correct/count)
-
+parser = argparse.ArgumentParser(description='USetting')
+parser.add_argument('--k', default=4, type=int, help='the number of in-context examples')
+args = parser.parse_args()
+K = args.k + 1
+    
 if 1: #test coded accuracy:
     # 7529 8100 0.9295061728395062
     sequences = []
@@ -72,7 +47,6 @@ if 1: #test coded accuracy:
             #    pairs.append([b,a])
     random.shuffle(pairs)
     
-    K = 1
     N = int(np.ceil(len(pairs)/K))
     correct1 = 0
     correct2 = 0
@@ -104,5 +78,6 @@ if 1: #test coded accuracy:
                 print('**************************************')
         except:
             print('**************************************')
-            
-        print(count,correct1/count,correct2/count)
+        
+        print('addition acc: ', correct1/count, ' add-1 addition acc: ',correct2/count,)
+        #print(count,correct1/count,correct2/count)
