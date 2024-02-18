@@ -123,7 +123,7 @@ python Ushape.py --k 4
 ```
 
 ### Figure 8
-Note: In the following codes, the inferences of llama2, mistral, and mixtral are based on [vllm](https://docs.vllm.ai/en/latest/), you will need at least 4xA100 to run the biggest models including mixtral and llama-2-70b-hf.
+Note: In the following codes, the inferences of llama2, mistral, and mixtral are based on [vllm](https://docs.vllm.ai/en/latest/). One will need at least 4xA100 to run the biggest models, including mixtral and llama-2-70b-hf.
 #### Step 1: Go to the Folder
 ```bash
 cd RealWorldLLMExperiment/Figure8/
@@ -151,18 +151,40 @@ python ZeroICL.py
 
 ## Transformer Experiment
 The following code can be run on a single 4090 GPU.
-### Figure 9
+#### Step 1: Go to the Folder
 ```bash
-python TS_Regular4_4_run.py
+cd TransformerExperiment/
+```
+### Figure 9
+#### Step 2 (Method 1): Get Results from Scratch
+```bash
+python TS_Regular4_delta_run.py
+```
+#### Step 2 (Method 2): Download Results from Dropbox
+Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0).
+#### Step 3: Visualize Results
+```bash
 python TS_Regular4_delta_visual.py
 ```
 ### Figure 10
+#### Step 2 (Method 1): Get Results from Scratch
 ```bash
 python TS_RegularM_run.py
+```
+#### Step 2 (Method 2): Download Results from Dropbox
+Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0).
+#### Step 3: Visualize Results
+```bash
 python TS_RegularM_visual.py
 ```
 ### Figure 11
+#### Step 2 (Method 1): Get Results from Scratch
 ```bash
 python TS_D_d_run.py
+```
+#### Step 2 (Method 2): Download Results from Dropbox
+Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0).
+#### Step 3: Visualize Results
+```bash
 python TS_D_d_visual.py
 ```
