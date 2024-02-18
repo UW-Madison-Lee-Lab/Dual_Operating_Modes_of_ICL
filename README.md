@@ -107,14 +107,21 @@ to get Figure6.pdf.
 
 ## RealWorld LLM Experiment
 ### Table 1
+#### Step 1: Go to the Folder
 ```bash
 cd RealWorldLLMExperiment/Table1/
+```
+#### Step 2: Register Your Openai key
+```bash
 vi call_openai.py
 ```
-replace "yourkey" in the file with your openai key
+replace "yourkey" in the file with your Openai key
+#### Step 3: Get Results from Scratch
+For k (for instance k=4) in-context examples, run
 ```bash
-python Ushape.py
+python Ushape.py --k 4
 ```
+
 ### Figure 8
 Note: In the following codes, the inferences of llama2, mistral, and mixtral are based on [vllm](https://docs.vllm.ai/en/latest/), you will need at least 4xA100 to run the biggest models including mixtral and llama-2-70b-hf.
 ```bash
