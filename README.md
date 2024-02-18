@@ -26,7 +26,9 @@ To replicate the experiments efficiently, download the .zip files from the provi
 
 ## Setup for Non Real-world LLM
 ### System
-Ubuntu 22.04.3 LTS, Python 3.10.12
+Ubuntu 22.04.3 LTS
+
+Python 3.10.12
 ### Package
 setproctitle              1.3.2
 
@@ -42,28 +44,47 @@ pytorch                   2.0.1
 
 ## Numerical Computation
 ### Figure 4
+#### Step 1: Go to the Folder
 ```bash
 cd NumericalComputation/Figure4/
 ```
-One could revise "K = 20000" in the code to a smaller value to speed up the process, but a higher variance should be expected.
-
-Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0). 
-or
+#### Step 2 (Method 1): Get Results from Scratch
 ```bash
 python BayesianSimulation_Preprocess.py
 ```
-
+One can reduce the sample size "K = 20000" for the Monte Carlo simulation in the code to accelerate the process, though this will likely result in increased variance.
+#### Step 2 (Method 2): Download Results from Dropbox
+Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0).
+#### Step 3: Visualize Results
 Then run
 ```bash
 python BayesianSimulation_Visualize.py
 ```
-to get Figure4.pdf
+to get Figure4.pdf.
+
 ### Figure 5
+#### Step 1: Go to the Folder
 ```bash
 cd NumericalComputation/Figure5/
-python 5.1.2.py
 ```
+#### Step 2 (Method 1): Get Results from Scratch
+```bash
+python 5.1.2_Preprocess.py
+```
+One can reduce the sample size "K = 80000" for the Monte Carlo simulation in the code to accelerate the process, though this will likely result in increased variance.
+#### Step 2 (Method 2): Download Results from Dropbox
+Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0).
+#### Step 3: Visualize Results
+Then run
+```bash
+python 5.1.2_Visualize.py
+```
+to get Figure5.pdf.
+
 ### Figure 6
+#### Step 1: Go to the Folder
+#### Step 2 (Method 1): Get Results from Scratch
+#### Step 2 (Method 2): Download Results from Dropbox
 ```bash
 cd NumericalComputation/Figure5/
 python 5.1.3-EarlyAscentWithCorrectLabels.py
