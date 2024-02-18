@@ -20,14 +20,39 @@ Lastly, we validate our findings and predictions via experiments involving Trans
 
 # Experiments
 The following sections give guidance for reproducing all the experiments in the paper.
+
 ## Accessing Data for Efficient Experiment Replication 
 To replicate the experiments efficiently, download the .zip files from the provided [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0) and unzip them directly into the corresponding directory within your cloned or downloaded GitHub repository. (You need a Dropbox account first. Register one with any email for free! Do not spend money on it to download the data!) For instance, if the .zip file resides in "NumericalComputation/Figure4/" within Dropbox, it should be unzipped to "NumericalComputation/Figure4/" in your local repository. Please note that some experimental outcomes are not included in this link due to their execution time.
+
+## Setup for Non Real-world LLM
+### System
+Ubuntu 22.04.3 LTS, Python 3.10.12
+### Package
+setproctitle              1.3.2
+matplotlib                3.7.2
+tqdm                      4.66.1
+scikit-learn              1.3.2
+scipy                     1.11.2
+pytorch                   2.0.1
+
 ## Numerical Computation
 ### Figure 4
 ```bash
 cd NumericalComputation/Figure4/
-python BayesianSimulation_prediction.py
 ```
+One could revise "K = 20000" in the code to a smaller value to speed up the process, but a higher variance should be expected.
+
+Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0). 
+or
+```bash
+python BayesianSimulation_Preprocess.py
+```
+
+Then run
+```bash
+python BayesianSimulation_Visualize.py
+```
+to get Figure4.pdf
 ### Figure 5
 ```bash
 cd NumericalComputation/Figure5/
