@@ -115,7 +115,7 @@ cd RealWorldLLMExperiment/Table1/
 ```bash
 vi call_openai.py
 ```
-replace "yourkey" in the file with your Openai key
+Replace the string "yourkey" in the code with your Openai key.
 #### Step 3: Get Results from Scratch
 For k (for instance k=4) in-context examples, run
 ```bash
@@ -124,11 +124,16 @@ python Ushape.py --k 4
 
 ### Figure 8
 Note: In the following codes, the inferences of llama2, mistral, and mixtral are based on [vllm](https://docs.vllm.ai/en/latest/), you will need at least 4xA100 to run the biggest models including mixtral and llama-2-70b-hf.
+#### Step 1: Go to the Folder
 ```bash
 cd RealWorldLLMExperiment/Figure8/
+```
+#### Step 2: Register Your Openai key
+```bash
 vi call_openai.py
 ```
-Replace "yourkey" in the file with your openai key
+Replace the string "yourkey" in the code with your Openai key.
+#### Step 3 (Method 1): Get Results from Scratch
 ```bash
 python test_gpt4.py
 python test_llama-2-13b-hf.py
@@ -136,10 +141,14 @@ python test_llama-2-70b-hf.py
 python test_mistral.py
 python test_mixtral.py
 ```
-After finishing running the five experiments, run:
+#### Step 3 (Method 2): Download Results from Dropbox
+Download and unzip the corresponding .zip file from [Dropbox link](https://www.dropbox.com/scl/fo/q0rj5eyfd9wasatbnpy7r/h?rlkey=epjq87hvf3br3ljqa6a1g50bn&dl=0).
+#### Step 4: Visualize Results
+After step 3, run:
 ```
-python 5.2.2-ZeroICL.py
+python ZeroICL.py
 ```
+
 ## Transformer Experiment
 The following code can be run on a single 4090 GPU.
 ### Figure 9
