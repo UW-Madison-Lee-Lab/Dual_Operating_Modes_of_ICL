@@ -2,7 +2,7 @@ import os
 import argparse
 import setproctitle
 from tqdm import tqdm
-from multiprocessing import Pool
+#from multiprocessing import Pool
 import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
@@ -548,12 +548,12 @@ class PriorProcesser:
         bs_ys = np.stack(bs_ys, axis=0)
         bs_zs = np.stack(bs_zs, axis=0)
         return bs_xs, bs_ys, bs_ys
-    def arxiv_draw_sequences(self, bs, k, num_processes=12):
-        topic_ms, topic_ws = self.draw_topics(bs)
-        samples = []
-        with Pool(processes=num_processes) as pool:
-            samples = pool.map(self.draw_task, [(topic_ms[i], topic_ws[i]) for i in range(bs)])
-        return samples
+    #def arxiv_draw_sequences(self, bs, k, num_processes=12):
+    #    topic_ms, topic_ws = self.draw_topics(bs)
+    #    samples = []
+    #    with Pool(processes=num_processes) as pool:
+    #        samples = pool.map(self.draw_task, [(topic_ms[i], topic_ws[i]) for i in range(bs)])
+    #    return samples
     
     def draw_demon_sequences(self, bs, k):
         topic_ms, topic_ws = self.draw_topics(bs)

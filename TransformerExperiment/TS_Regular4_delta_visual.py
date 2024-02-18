@@ -174,7 +174,20 @@ if 1:
         prior = Regular4(delta_m**0.5, delta_m**0.5)
         priorProcesser = PriorProcesser(prior)
         
-        if 1: # data
+        if B_load and T_load: # data
+            if not D_load:
+                bs_xs, bs_ys, bs_retrieval, bs_learning = priorProcesser.draw_demon_sequences(K, args.num_k)
+                
+                #np.save(folder+'bs_xs.npy', bs_xs)
+                #np.save(folder+'bs_ys.npy', bs_ys)
+                np.save(folder+'bs_retrieval.npy', bs_retrieval)
+                np.save(folder+'bs_learning.npy', bs_learning)
+            else:
+                #bs_xs = np.load(folder+'bs_xs.npy')
+                #bs_ys = np.load(folder+'bs_ys.npy')
+                bs_retrieval = np.load(folder+'bs_retrieval.npy')
+                bs_learning = np.load(folder+'bs_learning.npy')
+        else:
             if not D_load:
                 bs_xs, bs_ys, bs_retrieval, bs_learning = priorProcesser.draw_demon_sequences(K, args.num_k)
                 
@@ -295,7 +308,7 @@ if 1:
     axes[0,2].legend(bbox_to_anchor=(0.4, 1.85), fontsize=64, ncol=4, loc='upper center')
     fig.text(0.5, 0.04, 'Number of In-Context Examples '+r'$(k)$', ha='center', va='center', fontsize=64)
     plt.tight_layout()
-    plt.savefig('TransformerFig/'+fig_name+'.pdf',bbox_inches='tight')
+    plt.savefig(fig_name+'.pdf',bbox_inches='tight')
         
         # Save trained model as state dictionary checkpoint
         #save_checkpoint({"model_state_dict": model.state_dict(), 
