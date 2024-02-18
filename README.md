@@ -29,10 +29,15 @@ To replicate the experiments efficiently, download the .zip files from the provi
 Ubuntu 22.04.3 LTS, Python 3.10.12
 ### Package
 setproctitle              1.3.2
+
 matplotlib                3.7.2
+
 tqdm                      4.66.1
+
 scikit-learn              1.3.2
+
 scipy                     1.11.2
+
 pytorch                   2.0.1
 
 ## Numerical Computation
