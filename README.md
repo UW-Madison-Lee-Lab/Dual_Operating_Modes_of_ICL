@@ -106,7 +106,7 @@ python EarlyAscent_Visualize.py
 to get Figure6.pdf.
 
 ## RealWorld LLM Experiment
-### Table 1
+### Table 1 (running with GPT-4 2023/11/20)
 #### Step 1: Go to the Folder
 ```bash
 cd RealWorldLLMExperiment/Table1/
