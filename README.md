@@ -4,7 +4,7 @@
     <p>UW-Madison</p>
     </h4>
 
-**Paper Link**: TBD link
+**Paper Link**: [arxiv.org/abs/2402.18819](https://arxiv.org/abs/2402.18819)
 
 In-context learning (ICL) exhibits dual operating modes: **task learning**, i.e., acquiring a new skill from in-context samples, and **task retrieval**, i.e., locating and activating a relevant pretrained skill.
 Recent theoretical work investigates various mathematical models to analyze ICL, but existing models explain only one operating mode at a time.
